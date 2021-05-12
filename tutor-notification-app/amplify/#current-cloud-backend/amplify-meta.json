@@ -1,0 +1,64 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-tutornotificationapp-dev-152611-authRole",
+      "UnauthRoleArn": "arn:aws:iam::391106747453:role/amplify-tutornotificationapp-dev-152611-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::391106747453:role/amplify-tutornotificationapp-dev-152611-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-tutornotificationapp-dev-152611-deployment",
+      "UnauthRoleName": "amplify-tutornotificationapp-dev-152611-unauthRole",
+      "StackName": "amplify-tutornotificationapp-dev-152611",
+      "StackId": "arn:aws:cloudformation:us-east-1:391106747453:stack/amplify-tutornotificationapp-dev-152611/3ec2a600-a615-11eb-be27-0acf699c7d11",
+      "AmplifyAppId": "d2qf8e5ypxt274"
+    }
+  },
+  "function": {
+    "sendEmailFucntion": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "lastBuildTimeStamp": "2021-05-12T18:36:17.303Z",
+      "lastPackageTimeStamp": "2021-05-12T18:36:17.333Z",
+      "distZipFilename": "sendEmailFucntion-39356b3547654c393947-build.zip",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-tutornotificationapp-dev-152611-deployment/amplify-cfn-templates/function/sendEmailFucntion-cloudformation-template.json",
+        "logicalId": "functionsendEmailFucntion"
+      },
+      "lastPushTimeStamp": "2021-05-12T18:37:23.298Z",
+      "output": {
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:391106747453:function:sendEmailFucntion-dev",
+        "Name": "sendEmailFucntion-dev",
+        "LambdaExecutionRole": "tutornotificationappLambdaRole891b9f75-dev"
+      },
+      "lastPushDirHash": "rid+gYSXzGJzdeMnKhp8osXDec4="
+    }
+  },
+  "api": {
+    "sendEmailRestApi": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "sendEmailFucntion",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ],
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-tutornotificationapp-dev-152611-deployment/amplify-cfn-templates/api/sendEmailRestApi-cloudformation-template.json",
+        "logicalId": "apisendEmailRestApi"
+      },
+      "lastPushTimeStamp": "2021-05-12T18:37:23.294Z",
+      "output": {
+        "ApiName": "sendEmailRestApi",
+        "RootUrl": "https://oimen2ewsa.execute-api.us-east-1.amazonaws.com/dev",
+        "ApiId": "oimen2ewsa"
+      },
+      "lastPushDirHash": "ko5pMB5OwPCROs7rcyupTZQ958g="
+    }
+  }
+}

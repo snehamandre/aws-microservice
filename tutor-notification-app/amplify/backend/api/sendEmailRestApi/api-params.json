@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/sendEmail",
+            "lambdaFunction": "sendEmailFucntion",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/sendEmail"
+        }
+    ],
+    "resourceName": "sendEmailRestApi",
+    "apiName": "sendEmailRestApi",
+    "functionArns": [
+        {
+            "lambdaFunction": "sendEmailFucntion"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-tutornotificationapp-dev-152611-authRole",
+        "unAuthRoleName": "amplify-tutornotificationapp-dev-152611-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "sendEmailFucntion",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

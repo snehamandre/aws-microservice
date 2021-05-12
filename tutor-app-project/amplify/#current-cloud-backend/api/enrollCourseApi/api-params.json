@@ -1,0 +1,43 @@
+{
+    "paths": [
+        {
+            "name": "/list",
+            "lambdaFunction": "enrollCourseFunction",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/list"
+        },
+        {
+            "name": "/add",
+            "lambdaFunction": "enrollCourseFunction",
+            "privacy": {
+                "open": true
+            }
+        }
+    ],
+    "resourceName": "enrollCourseApi",
+    "apiName": "enrollCourseApi",
+    "functionArns": [
+        {
+            "lambdaFunction": "enrollCourseFunction"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-tutorappproject-dev-75828-authRole",
+        "unAuthRoleName": "amplify-tutorappproject-dev-75828-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "enrollCourseFunction",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ],
+    "uuid": "e2912617"
+}

@@ -1,0 +1,64 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-tutorappproject-dev-75828-authRole",
+      "UnauthRoleArn": "arn:aws:iam::391106747453:role/amplify-tutorappproject-dev-75828-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::391106747453:role/amplify-tutorappproject-dev-75828-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-tutorappproject-dev-75828-deployment",
+      "UnauthRoleName": "amplify-tutorappproject-dev-75828-unauthRole",
+      "StackName": "amplify-tutorappproject-dev-75828",
+      "StackId": "arn:aws:cloudformation:us-east-1:391106747453:stack/amplify-tutorappproject-dev-75828/2f7e4460-b1a0-11eb-afde-0ab010a589c7",
+      "AmplifyAppId": "dylxswic2pzkk"
+    }
+  },
+  "function": {
+    "enrollCourseFunction": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "lastBuildTimeStamp": "2021-05-12T18:35:37.168Z",
+      "lastPackageTimeStamp": "2021-05-12T18:35:37.688Z",
+      "distZipFilename": "enrollCourseFunction-68365a4434627830346f-build.zip",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-tutorappproject-dev-75828-deployment/amplify-cfn-templates/function/enrollCourseFunction-cloudformation-template.json",
+        "logicalId": "functionenrollCourseFunction"
+      },
+      "lastPushTimeStamp": "2021-05-12T18:36:45.561Z",
+      "output": {
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:391106747453:function:enrollCourseFunction-dev",
+        "Name": "enrollCourseFunction-dev",
+        "LambdaExecutionRole": "tutorappprojectLambdaRole7c971c22-dev"
+      },
+      "lastPushDirHash": "ATZMnf5ilrxViFcVqQZvZqnfkys="
+    }
+  },
+  "api": {
+    "enrollCourseApi": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "enrollCourseFunction",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ],
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-tutorappproject-dev-75828-deployment/amplify-cfn-templates/api/enrollCourseApi-cloudformation-template.json",
+        "logicalId": "apienrollCourseApi"
+      },
+      "lastPushTimeStamp": "2021-05-12T18:36:45.555Z",
+      "output": {
+        "ApiName": "enrollCourseApi",
+        "RootUrl": "https://tsvz40xr14.execute-api.us-east-1.amazonaws.com/dev",
+        "ApiId": "tsvz40xr14"
+      },
+      "lastPushDirHash": "5ejc4wjQGhD55ed3KCVNQayQtX8="
+    }
+  }
+}
